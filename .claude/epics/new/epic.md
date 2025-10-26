@@ -5,7 +5,7 @@ created: 2025-10-26T15:45:30Z
 updated: 2025-10-26T16:07:52Z
 progress: 0%
 prd: .claude/prds/new.md
-github: [Will be updated when synced to GitHub]
+github: https://github.com/Redskyeye/moonstone-ai-platform/issues/1
 ---
 
 # Epic: 月光石AI赋能职业规划师平台
@@ -368,22 +368,22 @@ export const theme = {
 ## 任务创建列表
 
 ### 第一阶段任务（核心体验）
-- [ ] **001.md - 设计系统开发** (parallel: true) - 8小时
-- [ ] **002.md - 项目初始化** (parallel: true) - 6小时
-- [ ] **003.md - 主题系统实现** (parallel: true) - 5小时
-- [ ] **004.md - 路由和布局** (parallel: true) - 7小时
+- [ ] **#2 - 设计系统开发** (parallel: true) - 8小时
+- [ ] **#3 - 项目初始化** (parallel: true) - 6小时
+- [ ] **#4 - 主题系统实现** (parallel: true) - 5小时
+- [ ] **#5 - 路由和布局** (parallel: true) - 7小时
 
 ### 第二阶段任务（功能完善）
-- [ ] **005.md - 着陆页开发** (parallel: true) - 12小时
-- [ ] **006.md - N8N Webhook集成** (parallel: true) - 10小时
-- [ ] **007.md - 文件上传组件** (parallel: true) - 8小时
-- [ ] **008.md - 简历优化三步流程** (parallel: false, depends_on: [006, 007]) - 14小时
-- [ ] **009.md - 面试辅导模块** (parallel: true) - 16小时
-- [ ] **010.md - 效率工具套件** (parallel: true) - 14小时
-- [ ] **011.md - 用户系统** (parallel: true) - 12小时
+- [ ] **#6 - 着陆页开发** (parallel: true) - 12小时
+- [ ] **#7 - N8N Webhook集成** (parallel: true) - 10小时
+- [ ] **#8 - 文件上传组件** (parallel: true) - 8小时
+- [ ] **#9 - 简历优化三步流程** (parallel: false, depends_on: [7, 8]) - 14小时
+- [ ] **#10 - 面试辅导模块** (parallel: true) - 16小时
+- [ ] **#11 - 效率工具套件** (parallel: true) - 14小时
+- [ ] **#12 - 用户系统** (parallel: true) - 12小时
 
 ### 第三阶段任务（优化提升）
-- [ ] **012.md - 性能优化和部署** (parallel: false, depends_on: [008, 009, 010, 011]) - 20小时
+- [ ] **#13 - 性能优化和部署** (parallel: false, depends_on: [9, 10, 11, 12]) - 20小时
 
 ### 任务统计
 - **总任务数**: 12个
@@ -391,6 +391,10 @@ export const theme = {
 - **依赖任务**: 3个
 - **预估总工时**: 132小时
 - **预计完成时间**: 3个月（按每周40小时计算）
+
+### GitHub链接
+- **史诗**: https://github.com/Redskyeye/moonstone-ai-platform/issues/1
+- **任务**: #2-13（所有子任务Issues）
 
 ## 依赖关系
 
