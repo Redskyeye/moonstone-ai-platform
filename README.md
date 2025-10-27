@@ -1,494 +1,323 @@
-# Claude Code PM
+# 月光石AI职业咨询平台
 
-[![Automaze](https://img.shields.io/badge/By-automaze.io-4b3baf)](https://automaze.io)
-&nbsp;
-[![Claude Code](https://img.shields.io/badge/+-Claude%20Code-d97757)](https://github.com/automazeio/ccpm/blob/main/README.md)
-[![GitHub Issues](https://img.shields.io/badge/+-GitHub%20Issues-1f2328)](https://github.com/automazeio/ccpm)
-&nbsp;
-[![Mentioned in Awesome Claude Code](https://awesome.re/mentioned-badge.svg)](https://github.com/hesreallyhim/awesome-claude-code?tab=readme-ov-file#general-)
-&nbsp;
-[![MIT License](https://img.shields.io/badge/License-MIT-28a745)](https://github.com/automazeio/ccpm/blob/main/LICENSE)
-&nbsp;
-[![Follow on 𝕏](https://img.shields.io/badge/𝕏-@aroussi-1c9bf0)](http://x.com/intent/follow?screen_name=aroussi)
-&nbsp;
-[![Star this repo](https://img.shields.io/github/stars/automazeio/ccpm.svg?style=social&label=Star%20this%20repo&maxAge=60)](https://github.com/automazeio/ccpm)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-### Claude Code workflow to ship ~~faster~~ _better_ using spec-driven development, GitHub issues, Git worktrees, and multiple AI agents running in parallel.
+> 🌟 **专业的AI驱动职业发展服务平台**，为求职者提供智能简历优化、职业规划建议、模拟面试训练等一站式解决方案。
 
-**[中文文档 (Chinese Documentation)](zh-docs/README_ZH.md)**
+**🌐 网站地址**: [www.ygsjw.com](https://www.ygsjw.com)
 
-Stop losing context. Stop blocking on tasks. Stop shipping bugs. This battle-tested system turns PRDs into epics, epics into GitHub issues, and issues into production code – with full traceability at every step.
+## ✨ 核心功能
 
-![Claude Code PM](screenshot.webp)
+### 📄 **AI简历优化**
+- 智能解析简历内容，识别技能和经验
+- 针对目标职位进行个性化优化建议
+- 多维度评分体系（技能匹配、格式规范、关键词优化）
+- 支持PDF、DOC、DOCX格式
+- 实时预览优化效果
 
-## Table of Contents
+### 🎯 **模拟面试训练**
+- AI驱动的智能面试官
+- 多维度面试评估（技术能力、沟通表达、问题解决）
+- 实时反馈和改进建议
+- 覆盖多种职位和行业
+- 面试报告生成
 
-- [Background](#background)
-- [The Workflow](#the-workflow)
-- [What Makes This Different?](#what-makes-this-different)
-- [Why GitHub Issues?](#why-github-issues)
-- [Core Principle: No Vibe Coding](#core-principle-no-vibe-coding)
-- [System Architecture](#system-architecture)
-- [Workflow Phases](#workflow-phases)
-- [Command Reference](#command-reference)
-- [The Parallel Execution System](#the-parallel-execution-system)
-- [Key Features & Benefits](#key-features--benefits)
-- [Proven Results](#proven-results)
-- [Example Flow](#example-flow)
-- [Get Started Now](#get-started-now)
-- [Local vs Remote](#local-vs-remote)
-- [Technical Notes](#technical-notes)
-- [Support This Project](#support-this-project)
+### 🗺️ **职业规划指导**
+- 技能评估和差距分析
+- 个性化职业发展路径建议
+- 行业薪资数据分析
+- 学习资源推荐
+- 职业目标设定
 
-## Background
+### 📊 **求职市场洞察**
+- 实时行业薪资数据
+- 技能需求趋势分析
+- 竞争力评估
+- 就业市场动态
 
-Every team struggles with the same problems:
-- **Context evaporates** between sessions, forcing constant re-discovery
-- **Parallel work creates conflicts** when multiple developers touch the same code
-- **Requirements drift** as verbal decisions override written specs
-- **Progress becomes invisible** until the very end
+## 🏗️ 技术架构
 
-This system solves all of that.
+### 前端技术栈
+- **框架**: Next.js 14 (App Router)
+- **UI库**: React 18 + TypeScript
+- **样式**: Tailwind CSS + Framer Motion
+- **状态管理**: Zustand
+- **构建工具**: Turbopack
+- **部署**: Vercel
 
-## The Workflow
+### 后端服务
+- **工作流引擎**: N8N
+- **数据处理**: AI模型集成
+- **文件存储**: 云存储服务
+- **API**: RESTful API + Webhook
 
-```mermaid
-graph LR
-    A[PRD Creation] --> B[Epic Planning]
-    B --> C[Task Decomposition]
-    C --> D[GitHub Sync]
-    D --> E[Parallel Execution]
+### 核心特性
+- 🚀 **高性能**: Next.js 14 App Router + React 18 并发特性
+- 🎨 **现代化UI**: Tailwind CSS + Framer Motion动画
+- 🔒 **类型安全**: TypeScript 严格模式
+- 📱 **响应式设计**: 完美适配桌面端和移动端
+- 🌍 **SEO优化**: 服务端渲染 + 结构化数据
+- ⚡ **性能优化**: 代码分割、懒加载、图片优化
+
+## 🚀 快速开始
+
+### 环境要求
+- Node.js 18.17+
+- npm 9+ 或 yarn 1.22+
+
+### 安装依赖
+```bash
+# 克隆项目
+git clone https://github.com/your-org/ygsjw-platform.git
+cd ygsjw-platform
+
+# 安装依赖
+npm install
+
+# 复制环境变量文件
+cp .env.example .env.local
 ```
 
-### See It In Action (60 seconds)
+### 配置环境变量
+```bash
+# .env.local
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3001/api
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+
+# 认证配置
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-key
+
+# 第三方服务
+N8N_WEBHOOK_URL=your-n8n-webhook-url
+UPLOAD_SECRET_KEY=your-upload-secret
+```
+
+### 启动开发服务器
+```bash
+# 启动前端开发服务器
+npm run dev
+
+# 在另一个终端启动后端服务（如果需要）
+npm run dev:api
+```
+
+访问 [http://localhost:3000](http://localhost:3000) 查看应用。
+
+## 📁 项目结构
+
+```
+ygsjw-platform/
+├── src/
+│   ├── app/                          # Next.js 14 App Router
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── (dashboard)/              # 路由组
+│   │   │   ├── layout.tsx
+│   │   │   ├── resume/
+│   │   │   ├── interview/
+│   │   │   └── career/
+│   │   └── api/                      # API 路由
+│   ├── components/                   # 组件库
+│   │   ├── ui/                      # 基础UI组件
+│   │   ├── layout/                  # 布局组件
+│   │   ├── features/                # 功能组件
+│   │   └── common/                  # 通用组件
+│   ├── hooks/                       # 自定义 Hooks
+│   ├── lib/                         # 工具库
+│   ├── stores/                      # Zustand 状态管理
+│   ├── types/                       # TypeScript 类型定义
+│   └── styles/                      # 样式文件
+├── docs/                            # 项目文档
+│   ├── architecture.md              # 系统架构文档
+│   ├── api-specification.md         # API接口规范
+│   └── deployment.md                # 部署文档
+├── tests/                           # 测试文件
+├── public/                          # 静态资源
+└── ...配置文件
+```
+
+## 🛠️ 开发指南
+
+### 代码规范
+项目使用 ESLint + Prettier 进行代码格式化和规范检查：
 
 ```bash
-# Create a comprehensive PRD through guided brainstorming
-/pm:prd-new memory-system
+# 检查代码规范
+npm run lint
 
-# Transform PRD into a technical epic with task breakdown
-/pm:prd-parse memory-system
+# 自动修复格式问题
+npm run lint:fix
 
-# Push to GitHub and start parallel execution
-/pm:epic-oneshot memory-system
-/pm:issue-start 1235
+# 格式化代码
+npm run format
 ```
 
-## What Makes This Different?
-
-| Traditional Development | Claude Code PM System |
-|------------------------|----------------------|
-| Context lost between sessions | **Persistent context** across all work |
-| Serial task execution | **Parallel agents** on independent tasks |
-| "Vibe coding" from memory | **Spec-driven** with full traceability |
-| Progress hidden in branches | **Transparent audit trail** in GitHub |
-| Manual task coordination | **Intelligent prioritization** with `/pm:next` |
-
-## Why GitHub Issues?
-
-Most Claude Code workflows operate in isolation – a single developer working with AI in their local environment. This creates a fundamental problem: **AI-assisted development becomes a silo**.
-
-By using GitHub Issues as our database, we unlock something powerful:
-
-### 🤝 **True Team Collaboration**
-- Multiple Claude instances can work on the same project simultaneously
-- Human developers see AI progress in real-time through issue comments
-- Team members can jump in anywhere – the context is always visible
-- Managers get transparency without interrupting flow
-
-### 🔄 **Seamless Human-AI Handoffs**
-- AI can start a task, human can finish it (or vice versa)
-- Progress updates are visible to everyone, not trapped in chat logs
-- Code reviews happen naturally through PR comments
-- No "what did the AI do?" meetings
-
-### 📈 **Scalable Beyond Solo Work**
-- Add team members without onboarding friction
-- Multiple AI agents working in parallel on different issues
-- Distributed teams stay synchronized automatically
-- Works with existing GitHub workflows and tools
-
-### 🎯 **Single Source of Truth**
-- No separate databases or project management tools
-- Issue state is the project state
-- Comments are the audit trail
-- Labels provide organization
-
-This isn't just a project management system – it's a **collaboration protocol** that lets humans and AI agents work together at scale, using infrastructure your team already trusts.
-
-## Core Principle: No Vibe Coding
-
-> **Every line of code must trace back to a specification.**
-
-We follow a strict 5-phase discipline:
-
-1. **🧠 Brainstorm** - Think deeper than comfortable
-2. **📝 Document** - Write specs that leave nothing to interpretation
-3. **📐 Plan** - Architect with explicit technical decisions
-4. **⚡ Execute** - Build exactly what was specified
-5. **📊 Track** - Maintain transparent progress at every step
-
-No shortcuts. No assumptions. No regrets.
-
-## System Architecture
-
-```
-.claude/
-├── CLAUDE.md          # Always-on instructions (copy content to your project's CLAUDE.md file)
-├── agents/            # Task-oriented agents (for context preservation)
-├── commands/          # Command definitions
-│   ├── context/       # Create, update, and prime context
-│   ├── pm/            # ← Project management commands (this system)
-│   └── testing/       # Prime and execute tests (edit this)
-├── context/           # Project-wide context files
-├── epics/             # ← PM's local workspace (place in .gitignore)
-│   └── [epic-name]/   # Epic and related tasks
-│       ├── epic.md    # Implementation plan
-│       ├── [#].md     # Individual task files
-│       └── updates/   # Work-in-progress updates
-├── prds/              # ← PM's PRD files
-├── rules/             # Place any rule files you'd like to reference here
-└── scripts/           # Place any script files you'd like to use here
-```
-
-## Workflow Phases
-
-### 1. Product Planning Phase
-
+### 测试
 ```bash
-/pm:prd-new feature-name
+# 运行单元测试
+npm run test
+
+# 运行集成测试
+npm run test:integration
+
+# 运行端到端测试
+npm run test:e2e
+
+# 生成测试覆盖率报告
+npm run test:coverage
 ```
-Launches comprehensive brainstorming to create a Product Requirements Document capturing vision, user stories, success criteria, and constraints.
 
-**Output:** `.claude/prds/feature-name.md`
-
-### 2. Implementation Planning Phase
-
+### 构建
 ```bash
-/pm:prd-parse feature-name
+# 构建生产版本
+npm run build
+
+# 启动生产服务器
+npm run start
+
+# 分析打包大小
+npm run analyze
 ```
-Transforms PRD into a technical implementation plan with architectural decisions, technical approach, and dependency mapping.
 
-**Output:** `.claude/epics/feature-name/epic.md`
+## 📚 API文档
 
-### 3. Task Decomposition Phase
+详细的API文档请参考：
+- [API接口规范](./docs/api-specification.md)
+- [系统架构设计](./docs/architecture.md)
 
+### 主要API端点
+
+#### 认证相关
+```http
+POST /api/v1/auth/register    # 用户注册
+POST /api/v1/auth/login       # 用户登录
+POST /api/v1/auth/refresh     # 刷新Token
+```
+
+#### 简历优化
+```http
+POST /api/v1/resume/upload    # 上传简历
+POST /api/v1/resume/optimize  # 开始优化
+GET  /api/v1/resume/result    # 获取结果
+```
+
+#### 模拟面试
+```http
+POST /api/v1/interview/start  # 开始面试
+POST /api/v1/interview/answer # 提交回答
+GET  /api/v1/interview/report # 获取报告
+```
+
+## 🚀 部署
+
+### Vercel部署（推荐）
+1. 将代码推送到GitHub
+2. 在Vercel中导入项目
+3. 配置环境变量
+4. 自动部署完成
+
+### 手动部署
 ```bash
-/pm:epic-decompose feature-name
-```
-Breaks epic into concrete, actionable tasks with acceptance criteria, effort estimates, and parallelization flags.
+# 构建项目
+npm run build
 
-**Output:** `.claude/epics/feature-name/[task].md`
-
-### 4. GitHub Synchronization
-
-```bash
-/pm:epic-sync feature-name
-# Or for confident workflows:
-/pm:epic-oneshot feature-name
-```
-Pushes epic and tasks to GitHub as issues with appropriate labels and relationships.
-
-### 5. Execution Phase
-
-```bash
-/pm:issue-start 1234  # Launch specialized agent
-/pm:issue-sync 1234   # Push progress updates
-/pm:next             # Get next priority task
-```
-Specialized agents implement tasks while maintaining progress updates and an audit trail.
-
-## Command Reference
-
-> [!TIP]
-> Type `/pm:help` for a concise command summary
-
-### Initial Setup
-- `/pm:init` - Install dependencies and configure GitHub
-
-### PRD Commands
-- `/pm:prd-new` - Launch brainstorming for new product requirement
-- `/pm:prd-parse` - Convert PRD to implementation epic
-- `/pm:prd-list` - List all PRDs
-- `/pm:prd-edit` - Edit existing PRD
-- `/pm:prd-status` - Show PRD implementation status
-
-### Epic Commands
-- `/pm:epic-decompose` - Break epic into task files
-- `/pm:epic-sync` - Push epic and tasks to GitHub
-- `/pm:epic-oneshot` - Decompose and sync in one command
-- `/pm:epic-list` - List all epics
-- `/pm:epic-show` - Display epic and its tasks
-- `/pm:epic-close` - Mark epic as complete
-- `/pm:epic-edit` - Edit epic details
-- `/pm:epic-refresh` - Update epic progress from tasks
-
-### Issue Commands
-- `/pm:issue-show` - Display issue and sub-issues
-- `/pm:issue-status` - Check issue status
-- `/pm:issue-start` - Begin work with specialized agent
-- `/pm:issue-sync` - Push updates to GitHub
-- `/pm:issue-close` - Mark issue as complete
-- `/pm:issue-reopen` - Reopen closed issue
-- `/pm:issue-edit` - Edit issue details
-
-### Workflow Commands
-- `/pm:next` - Show next priority issue with epic context
-- `/pm:status` - Overall project dashboard
-- `/pm:standup` - Daily standup report
-- `/pm:blocked` - Show blocked tasks
-- `/pm:in-progress` - List work in progress
-
-### Sync Commands
-- `/pm:sync` - Full bidirectional sync with GitHub
-- `/pm:import` - Import existing GitHub issues
-
-### Maintenance Commands
-- `/pm:validate` - Check system integrity
-- `/pm:clean` - Archive completed work
-- `/pm:search` - Search across all content
-
-## The Parallel Execution System
-
-### Issues Aren't Atomic
-
-Traditional thinking: One issue = One developer = One task
-
-**Reality: One issue = Multiple parallel work streams**
-
-A single "Implement user authentication" issue isn't one task. It's...
-
-- **Agent 1**: Database tables and migrations
-- **Agent 2**: Service layer and business logic
-- **Agent 3**: API endpoints and middleware
-- **Agent 4**: UI components and forms
-- **Agent 5**: Test suites and documentation
-
-All running **simultaneously** in the same worktree.
-
-### The Math of Velocity
-
-**Traditional Approach:**
-- Epic with 3 issues
-- Sequential execution
-
-**This System:**
-- Same epic with 3 issues
-- Each issue splits into ~4 parallel streams
-- **12 agents working simultaneously**
-
-We're not assigning agents to issues. We're **leveraging multiple agents** to ship faster.
-
-### Context Optimization
-
-**Traditional single-thread approach:**
-- Main conversation carries ALL the implementation details
-- Context window fills with database schemas, API code, UI components
-- Eventually hits context limits and loses coherence
-
-**Parallel agent approach:**
-- Main thread stays clean and strategic
-- Each agent handles its own context in isolation
-- Implementation details never pollute the main conversation
-- Main thread maintains oversight without drowning in code
-
-Your main conversation becomes the conductor, not the orchestra.
-
-### GitHub vs Local: Perfect Separation
-
-**What GitHub Sees:**
-- Clean, simple issues
-- Progress updates
-- Completion status
-
-**What Actually Happens Locally:**
-- Issue #1234 explodes into 5 parallel agents
-- Agents coordinate through Git commits
-- Complex orchestration hidden from view
-
-GitHub doesn't need to know HOW the work got done – just that it IS done.
-
-### The Command Flow
-
-```bash
-# Analyze what can be parallelized
-/pm:issue-analyze 1234
-
-# Launch the swarm
-/pm:epic-start memory-system
-
-# Watch the magic
-# 12 agents working across 3 issues
-# All in: ../epic-memory-system/
-
-# One clean merge when done
-/pm:epic-merge memory-system
+# 部署到生产环境
+npm run deploy
 ```
 
-## Key Features & Benefits
+详细的部署指南请参考 [部署文档](./docs/deployment.md)。
 
-### 🧠 **Context Preservation**
-Never lose project state again. Each epic maintains its own context, agents read from `.claude/context/`, and updates locally before syncing.
+## 🧪 测试策略
 
-### ⚡ **Parallel Execution**
-Ship faster with multiple agents working simultaneously. Tasks marked `parallel: true` enable conflict-free concurrent development.
+### 测试覆盖率目标
+- 单元测试：> 80%
+- 集成测试：> 70%
+- E2E测试：关键用户流程100%
 
-### 🔗 **GitHub Native**
-Works with tools your team already uses. Issues are the source of truth, comments provide history, and there is no dependency on the Projects API.
+### 测试工具
+- **单元测试**: Jest + React Testing Library
+- **集成测试**: Jest + Supertest
+- **E2E测试**: Playwright
+- **视觉回归测试**: Chromatic
 
-### 🤖 **Agent Specialization**
-Right tool for every job. Different agents for UI, API, and database work. Each reads requirements and posts updates automatically.
+## 📊 性能指标
 
-### 📊 **Full Traceability**
-Every decision is documented. PRD → Epic → Task → Issue → Code → Commit. Complete audit trail from idea to production.
+### Core Web Vitals目标
+- **LCP** (Largest Contentful Paint): < 2.5秒
+- **FID** (First Input Delay): < 100毫秒
+- **CLS** (Cumulative Layout Shift): < 0.1
+- **FCP** (First Contentful Paint): < 1.8秒
 
-### 🚀 **Developer Productivity**
-Focus on building, not managing. Intelligent prioritization, automatic context loading, and incremental sync when ready.
+### 性能优化措施
+- 代码分割和懒加载
+- 图片优化（WebP、AVIF）
+- 缓存策略
+- CDN加速
+- 服务端渲染
 
-## Proven Results
+## 🔒 安全性
 
-Teams using this system report:
-- **89% less time** lost to context switching – you'll use `/compact` and `/clear` a LOT less
-- **5-8 parallel tasks** vs 1 previously – editing/testing multiple files at the same time
-- **75% reduction** in bug rates – due to the breaking down features into detailed tasks
-- **Up to 3x faster** feature delivery – based on feature size and complexity
+### 安全措施
+- JWT Token认证
+- 输入验证和清理
+- XSS和CSRF防护
+- 安全头部配置
+- 文件上传安全检查
 
-## Example Flow
+### 安全最佳实践
+- 定期依赖更新
+- 安全漏洞扫描
+- 代码安全审查
+- 最小权限原则
 
-```bash
-# Start a new feature
-/pm:prd-new memory-system
+## 🤝 贡献指南
 
-# Review and refine the PRD...
+我们欢迎社区贡献！请遵循以下步骤：
 
-# Create implementation plan
-/pm:prd-parse memory-system
+1. Fork 项目
+2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 创建 Pull Request
 
-# Review the epic...
-
-# Break into tasks and push to GitHub
-/pm:epic-oneshot memory-system
-# Creates issues: #1234 (epic), #1235, #1236 (tasks)
-
-# Start development on a task
-/pm:issue-start 1235
-# Agent begins work, maintains local progress
-
-# Sync progress to GitHub
-/pm:issue-sync 1235
-# Updates posted as issue comments
-
-# Check overall status
-/pm:epic-show memory-system
+### 提交信息规范
+```
+feat: 新功能
+fix: 修复bug
+docs: 文档更新
+style: 代码格式调整
+refactor: 代码重构
+test: 测试相关
+chore: 构建过程或辅助工具的变动
 ```
 
-## Get Started Now
+## 📄 许可证
 
-### Quick Setup (2 minutes)
+本项目采用 [MIT 许可证](LICENSE)。
 
-1. **Install this repository into your project**:
+## 🙏 致谢
 
-   #### Unix/Linux/macOS
+感谢以下开源项目：
+- [Next.js](https://nextjs.org/) - React 框架
+- [React](https://reactjs.org/) - UI 库
+- [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
+- [Framer Motion](https://www.framer.com/motion/) - 动画库
+- [Zustand](https://github.com/pmndrs/zustand) - 状态管理
 
-   ```bash
-   cd path/to/your/project/
-   curl -sSL https://automaze.io/ccpm/install | bash
-   # or: wget -qO- https://automaze.io/ccpm/install | bash
-   ```
+## 📞 联系我们
 
-   #### Windows (PowerShell)
-   ```bash
-   cd path/to/your/project/
-   iwr -useb https://automaze.io/ccpm/install | iex
-   ```
-   > ⚠️ **IMPORTANT**: If you already have a `.claude` directory, clone this repository to a different directory and copy the contents of the cloned `.claude` directory to your project's `.claude` directory.
-
-   See full/other installation options in the [installation guide ›](https://github.com/automazeio/ccpm/tree/main/install)
-
-
-2. **Initialize the PM system**:
-   ```bash
-   /pm:init
-   ```
-   This command will:
-   - Install GitHub CLI (if needed)
-   - Authenticate with GitHub
-   - Install [gh-sub-issue extension](https://github.com/yahsan2/gh-sub-issue) for proper parent-child relationships
-   - Create required directories
-   - Update .gitignore
-
-3. **Create `CLAUDE.md`** with your repository information
-   ```bash
-   /init include rules from .claude/CLAUDE.md
-   ```
-   > If you already have a `CLAUDE.md` file, run: `/re-init` to update it with important rules from `.claude/CLAUDE.md`.
-
-4. **Prime the system**:
-   ```bash
-   /context:create
-   ```
-
-
-
-### Start Your First Feature
-
-```bash
-/pm:prd-new your-feature-name
-```
-
-Watch as structured planning transforms into shipped code.
-
-## Local vs Remote
-
-| Operation | Local | GitHub |
-|-----------|-------|--------|
-| PRD Creation | ✅ | — |
-| Implementation Planning | ✅ | — |
-| Task Breakdown | ✅ | ✅ (sync) |
-| Execution | ✅ | — |
-| Status Updates | ✅ | ✅ (sync) |
-| Final Deliverables | — | ✅ |
-
-## Technical Notes
-
-### GitHub Integration
-- Uses **gh-sub-issue extension** for proper parent-child relationships
-- Falls back to task lists if extension not installed
-- Epic issues track sub-task completion automatically
-- Labels provide additional organization (`epic:feature`, `task:feature`)
-
-### File Naming Convention
-- Tasks start as `001.md`, `002.md` during decomposition
-- After GitHub sync, renamed to `{issue-id}.md` (e.g., `1234.md`)
-- Makes it easy to navigate: issue #1234 = file `1234.md`
-
-### Design Decisions
-- Intentionally avoids GitHub Projects API complexity
-- All commands operate on local files first for speed
-- Synchronization with GitHub is explicit and controlled
-- Worktrees provide clean git isolation for parallel work
-- GitHub Projects can be added separately for visualization
+- **网站**: [www.ygsjw.com](https://www.ygsjw.com)
+- **邮箱**: contact@ygsjw.com
+- **GitHub Issues**: [提交问题](https://github.com/your-org/ygsjw-platform/issues)
+- **技术支持**: support@ygsjw.com
 
 ---
 
-## Support This Project
-
-Claude Code PM was developed at [Automaze](https://automaze.io) **for developers who ship, by developers who ship**.
-
-If Claude Code PM helps your team ship better software:
-
-- ⭐ **[Star this repository](https://github.com/automazeio/ccpm)** to show your support
-- 🐦 **[Follow @aroussi on X](https://x.com/aroussi)** for updates and tips
-
-
----
-
-> [!TIP]
-> **Ship faster with Automaze.** We partner with founders to bring their vision to life, scale their business, and optimize for success.
-> **[Visit Automaze to book a call with me ›](https://automaze.io)**
-
----
-
-## Star History
-
-![Star History Chart](https://api.star-history.com/svg?repos=automazeio/ccpm)
+**⭐ 如果这个项目对你有帮助，请给我们一个 Star！**
